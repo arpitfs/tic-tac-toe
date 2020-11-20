@@ -1,5 +1,6 @@
 import React from 'react';
 import Board from '../Board/Board';
+import NavBar from '../NavBar/NavBar';
 
 class Game extends React.Component {
   constructor(props) {
@@ -8,16 +9,19 @@ class Game extends React.Component {
       isStart: false,
     };
   }
-    render() {
-      if(!this.state.isStart)
-      {
-        return (
-            <button className="enter-button" onClick={() => this.setState({ isStart: true })}>Enter the game</button>
-        );
-      }
-      else
-      {
-        return (
+  render() {
+    if (!this.state.isStart) {
+      return (
+        <div>
+          <NavBar />
+          <button className="enter-button" onClick={() => this.setState({ isStart: true })}>Enter the game</button>
+        </div>
+      );
+    }
+    else {
+      return (
+        <div>
+          <NavBar />
           <div className="game">
             <div className="game-board">
               <Board />
@@ -27,10 +31,10 @@ class Game extends React.Component {
               <ol>{/* TODO */}</ol>
             </div>
           </div>
-        );
-      }
-      
+        </div>
+      );
     }
   }
+}
 
 export default Game;

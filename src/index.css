@@ -20,17 +20,17 @@ ol, ul {
 
 .square {
   background: #fff;
-  border: 1px solid #999;
+  border: 2px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 70px;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
+  line-height: 80px;
+  height: 80px;
   margin-right: -1px;
   margin-top: -1px;
-  padding: 0;
+  padding-left: 20px;
   text-align: center;
-  width: 34px;
+  width: 80px;
 }
 
 .square:focus {
@@ -60,4 +60,9 @@ ol, ul {
   letter-spacing: 2px;
   border-radius: 40px;
   background: linear-gradient(90deg, #0162c8, #55e7fc);
+}
+
+.navbar {
+  align-items: center;
+  margin: 12px 36px;
 }
